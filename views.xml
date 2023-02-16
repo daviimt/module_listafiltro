@@ -1,0 +1,22 @@
+<odoo>
+    <record id="view_tree_todo" model="ir.ui.view">
+        <field name="name">view.tree.todo</field>
+        <field name="model">filtro.productos</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="descripcion"/>
+                <field name="categoria"/>
+                <field name="precioventa"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_view_todo" model="ir.actions.act_window">
+        <field name="name">filtro de productos</field>
+        <field name="res_model">filtro.productos</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_todo" parent="" action="module_listafiltro.action_view_todo"/>
+</odoo>
